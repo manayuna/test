@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>デスクトップ用</title>
+  <link rel="stylesheet" href="sakusei.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="all">
+    <div class="item">
+      <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <div class="menu-content">
+              <ul>
+                <li>
+                  <a href="#">メニューリンク1</a>
+                </li>
+                <li>
+                  <a href="#">メニューリンク2</a>
+                </li>
+                <li>
+                  <a href="#">メニューリンク3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </header>
+      <div>
+        <p style="font-size:24px;">portfolio</p>
+      </div>
+      <div class="menu">
+        <p>Profile</p>
+        <p>Self PR</p>
+        <p>Vision</p>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="text-overlay js-fade">人生に失敗がないと、人生を失敗する。<p>1stPortfolio</p></h1>
+    </div>
+    <div class="center">
+      <h1 class="profile js-fade">profile</h1>
+      <p>自己紹介</p>
+    </div>
+    <div class="flower">
+      <div>
+        <img src="img/flower.png" alt="花" class="size-a">
+      </div>
+      <ul class="list">
+        <li>name.</li>
+        <li>age.</li>
+        <li>caree.大学卒業</li>
+        <li>株式会社に入社</li>
+      </ul>
+    </div>
+    <div class="pr">
+      <h1 class="text js-fade">Self PR</h1>
+      <h2 class="text-text">自己PR</h2>
+      <div class="pr-list">
+        <div class="pr-text">
+          <h3 class="js-fade">好きなこと</h3>
+            <p>
+              私は体を鍛えることが好き
+            です。鍛えることで自分自身
+            の自信につながり、行動力に
+            繋がる為、体を鍛えることは
+            日課としておこなっておりま
+            す。
+            </p>
+        </div>
+        <div class="pr-text">
+          <h3 class="js-fade">得意なこと</h3>
+            <p>
+              私はプログラミングを学習
+            しており、ウェブサイトやウ
+            ェブサービスを作ることが得
+            意です。また、自分自身でス
+            キルを身につけていることで
+            クリエイティブ思考が身に付
+            き、具体的な企画を練ること
+            が得意です。
+            </p>
+        </div>
+        <div class="pr-text">
+          <h3 class="js-fade">今までの経験</h3>
+            <p>
+              私は学生の頃からＩＴベンチ
+            ャー企業で営業経験を積み、
+            テクノロジーに特化したセー
+            ルススキルを身につけて参り
+            ました。また、現在ではウェ
+            ブメディア関連の営業をおこ
+            なっております。 
+            </p>
+        </div>
+      </div>
+    </div>
+    <h1 class="text js-fade"><u>Vision</u></h1>
+    <h2 class="text-text">目標</h2>
+    <h1 class="color">クリエイティブ性を取り入れた人材になる</h1>
+    <div class="vision-content">
+      <p>私の人生において、クリエイティブな仕事に触れる機会はとても多かったです。</p>
+      <p>しかし、自分自身のクリエイティブ性は皆無でした。</p>
+      <p>段々と自分自身でも何か生み出していきたいと思いが強まり、</p>
+      <p>現在ウェブ関連のプログラミングを学習しております。</p>
+    </div>
+    <p>将来的にはフルスタックエンジニアを目指し、</p>
+    <p>セールスとプログラミングの領域で</p>
+    <p>イノベーションを起こしたいと考えております。</p>
+    <h1 class="comingsoon">NEXT　COMINGSOON</h1>
+    <div class="footer">
+      <h1 class="top">TOP</h1>
+      <p>created　by</p>
+    </div>
+  </div>
+  <script>
+    $(function(){
+	$(window).scroll(function (){
+		$('.js-fade').each(function(){
+			var pos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > pos - windowHeight + 100){
+				$(this).addClass('scroll');
+			}
+		});
+	});
+});
+  </script>
+</body>
+</html>

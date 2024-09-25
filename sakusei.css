@@ -1,0 +1,240 @@
+.all{
+  width: 900px;
+  margin: 0 auto;
+}
+.item{
+    color: #ffffff;
+    display: flex;
+    background: #4194b8;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: #4194b8;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+#menu-btn-check {
+  display: none;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  background-color: #4194b8;
+}
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+.menu-content ul li a {
+  display: block;
+  width: 50%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #4194b8;
+  transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+  left: 50%;/*メニューを画面内へ*/
+}
+.menu{
+  display: flex;
+  margin: 0px 30px;
+}
+p{
+  margin: 0px 50px;
+}
+.profile::first-letter{
+  color: #4194b8;
+}
+.profile{
+  text-decoration: underline;
+}
+.container {
+    height: 250px;
+    background-image: url("img/water.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .text-overlay {
+    top: 50%;
+    left: 50%;
+    color: rgb(87, 102, 110);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+.flower{
+  display: flex;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.size-a{
+  width: 300px;
+  height: auto;
+}
+.pr{
+  background-image: url("img/sora.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+.text{
+  text-align: center;
+  text-decoration: underline;
+}
+.text::first-letter{
+  color: #4194b8;
+}
+.color{
+  color: #4194b8;
+}
+.pr-list{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
+  text-align:center;
+}
+.pr-text{
+  background-color: #ffffff67;
+  border: 2px solid white;
+  width: 30%;
+  margin: 0 auto;
+}
+.size-b{
+  width: 945px;
+  height: 400px;
+}
+.size-c{
+  width: 945px;
+  height: 300px;
+}
+.center{
+  top: 50%;
+  left: 50%;
+}
+.list{
+  list-style-type: none;
+}
+*{
+  text-align: center;
+}
+
+ul{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+.vision-content{
+  margin-bottom: 30px;
+}
+.comingsoon{
+  margin-bottom: -15px;
+}
+.footer{
+  background-color: #4194b8;
+}
+.top{
+  display: inline-block;
+  padding: 10px;
+  border: 5px solid white;
+}
+@media screen and (max-width: 1000px) {
+  .flower{
+    display: block;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .pr-list{
+    display: block;
+  }
+}
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
